@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [vue()],
   css: {
     preprocessorOptions: {
@@ -14,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      "@assets": path.resolve(__dirname, "src/assets"),
       "@components": path.resolve(__dirname, "src/components"),
       "@pages": path.resolve(__dirname, "src/pages"),
       "@router": path.resolve(__dirname, "src/router"),

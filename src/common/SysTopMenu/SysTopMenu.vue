@@ -8,19 +8,20 @@
     >
         <el-menu-item index="0">
             <div style="margin-right: 10px;">
-                <el-avatar
+                <!-- <el-avatar
                     :src=logo
                     large
-                />
+                /> -->
+                <el-icon><Connection /></el-icon>
             </div>
-            农证贷云平台
+            银行贷款管理系统
         </el-menu-item>
         <div class="flex-grow" />
         <el-menu-item index="4" style="vertical-align: center;">
             <div class="user-avatar">
                 <div>
                     <el-avatar :icon="UserFilled" size="default" 
-                    :src="userAvatar"
+                    src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
                     />
                 </div>
             </div>
@@ -30,8 +31,8 @@
 
 <script lang="ts" setup>
     import { ref, onMounted } from 'vue'
-    import { UserFilled } from '@element-plus/icons-vue'
-    import { ElMenu, ElMenuItem, ElSubMenu, ElAvatar } from 'element-plus'
+    import { UserFilled, Connection } from '@element-plus/icons-vue'
+    import { ElMenu, ElMenuItem, ElSubMenu, ElAvatar, ElIcon } from 'element-plus'
     import logo from '@assets/logo.png'
     import userAvatar from '@assets/user.jpg'
     const activeIndex = ref('1')
@@ -41,6 +42,8 @@
 </script>
 
 <style scoped lang="scss">
+$common-bgc-primary: #fdf28b;
+
 .el-menu {
     background-color: $common-bgc-primary;
     color: $font-color-light;

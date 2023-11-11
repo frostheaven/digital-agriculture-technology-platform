@@ -1,7 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import { createrouter } from './routers.ts';
 let router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: createrouter,
   scrollBehavior() {
     return {

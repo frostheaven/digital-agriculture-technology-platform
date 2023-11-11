@@ -2,20 +2,23 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
+  "homepage": "./",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "animate.css": "^4.1.1",
     "axios": "^1.6.0",
     "element-plus": "^2.3.14",
     "pinia": "^2.1.6",
     "sass": "^1.68.0",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

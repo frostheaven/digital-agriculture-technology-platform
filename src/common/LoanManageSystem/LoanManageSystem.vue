@@ -6,66 +6,22 @@
         <el-container class="layout-container">
             <el-aside width="200px" style="background-color: #fff;">
                 <el-scrollbar>
-                    <el-menu :default-openeds="['planting-manage']" :default-active="activeIndex"
+                    <el-menu :default-active="activeIndex"
                         @select="handleSelect">
-                        <el-sub-menu index="planting-manage">
-                            <template #title>
-                                <el-icon>
-                                    <pie-chart />
-                                </el-icon>种植管理
-                            </template>
-                            <el-menu-item-group>
-                                <el-menu-item index="base-info">基础信息</el-menu-item>
-                                <el-menu-item index="raw-material-purchase-info">原料购买信息</el-menu-item>
-                                <el-menu-item index="planting-info">种植信息</el-menu-item>
-                            </el-menu-item-group>
-                        </el-sub-menu>
 
-                        <el-menu-item index="logistics-manage">
+                        <el-menu-item index="audit-manage">
                             <template #title>
                                 <el-icon>
                                     <Promotion />
-                                </el-icon>物流管理
+                                </el-icon>审验管理
                             </template>
                         </el-menu-item>
 
-                        <el-menu-item index="harvest-manage">
+                        <el-menu-item index="post-loan-manage">
                             <template #title>
                                 <el-icon>
                                     <Filter />
-                                </el-icon>采摘管理
-                            </template>
-                        </el-menu-item>
-
-                        <el-menu-item index="processing-manage">
-                            <template #title>
-                                <el-icon>
-                                    <Scissor />
-                                </el-icon>加工管理
-                            </template>
-                        </el-menu-item>
-
-                        <el-menu-item index="trace-query">
-                            <template #title>
-                                <el-icon>
-                                    <stamp />
-                                </el-icon>溯源查询
-                            </template>
-                        </el-menu-item>
-
-                        <el-menu-item index="loan">
-                            <template #title>
-                                <el-icon>
-                                    <Wallet/>
-                                </el-icon>我要贷款
-                            </template>
-                        </el-menu-item>
-
-                        <el-menu-item index="points-mall">
-                            <template #title>
-                                <el-icon>
-                                    <present />
-                                </el-icon>积分商城
+                                </el-icon>贷后管理
                             </template>
                         </el-menu-item>
                     </el-menu>
@@ -73,12 +29,6 @@
             </el-aside>
 
             <el-container>
-                <!-- <el-header style="font-size: 12px">
-                    <div class="toolbar">
-                        <span>{{ $route.meta.title }}</span>
-                    </div>
-                </el-header> -->
-
                 <el-main>
                     <router-view />
                 </el-main>
@@ -88,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import TopMenu from '@common/TopMenu/TopMenu.vue'
+import TopMenu from '@common/SysTopMenu/SysTopMenu.vue'
 
 import { ref, getCurrentInstance } from 'vue'
 import { Ticket, Scissor, Filter, PieChart, Wallet, Promotion, Present, Stamp } from '@element-plus/icons-vue'
@@ -108,6 +58,7 @@ const activeIndex: string = proxy.$router.name
 </script>
 
 <style scoped lang="scss">
+$font-hover-color: #e7a935;
 .top-menu {
     height: $top-menu-height;
     width: 100%;
