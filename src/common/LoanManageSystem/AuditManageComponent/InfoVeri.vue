@@ -99,7 +99,7 @@
 </template>
 <script lang='ts' setup>
 import { ElAvatar } from 'element-plus'
-import userAvatar from '@assets/user.jpg'
+import userAvatar from '@assets/user2.jpg'
 import IdentityCard from '@assets/identity.jpg'
 
 </script>
